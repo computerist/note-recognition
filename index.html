@@ -1,0 +1,23 @@
+<html>
+  <head>
+    <script src="3rd_party/vexflow-min.js">
+    </script>
+    <script src="midi_in.js">
+    </script>
+    <script src="recognition.js">
+    </script>
+  </head>
+  <body>
+    <div id="settings_container">
+      <h4>Settings <span id="show_settings">[-]</span></h4>
+      <ul id="settings">
+        <li><input type="radio" name="gametype" id="treble" value="treble" checked="true"/>Treble</li>
+        <li><input type="radio" name="gametype" id="bass" value="bass"/>Bass</li>
+        <li><input type="radio" name="gametype" id="mixed" value="mixed"/>Mixed</li>
+        </ul>
+    </div>
+    <canvas id="stave-canvas" width="100" height="130"></canvas>
+    <div>What is the note?</div>
+    <div id="message"></div>
+  </body>
+</html>
