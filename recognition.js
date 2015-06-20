@@ -78,7 +78,7 @@ Game.prototype.randomNote = function() {
 }
 
 Game.prototype.checkMidi = function(conversion) {
-  if (this.currentNote.letter == conversion.note &&
+  if (this.currentNote.letter == conversion.note.toLowerCase() &&
       this.currentNote.octave == conversion.octave) {
     this.showMessage('yay');
     this.play();
@@ -103,6 +103,8 @@ Game.prototype.checkKey = function(evt) {
   }
   var key = String.fromCharCode(keynum);
 
+  // TODO: Case conversion is messy - Maybe internally represent as midi
+  // note numbers?
   if(key.toLowerCase() == this.currentNote.letter) {
     this.showMessage('yay!');
     this.play();
